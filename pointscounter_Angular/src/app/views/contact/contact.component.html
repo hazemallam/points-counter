@@ -1,0 +1,107 @@
+<div>&ensp</div>
+<div class="main-content mt-5 text-center">
+    <div class="container text-center pt-3">
+        <h1>GET IN<br> TOUCH</h1>
+        <p class="text">We would love to hear from you! Get in touch with us or send us a message using the<br> form
+            below.</p>
+        <h6 class="text-center">
+            <span class="pr-5 hov" [style.color]="isColored1? '#e9204f':'#878787'"
+                (click)="changeContent1()">ISTANBUL</span>
+            <span class="pr-5 hov" [style.color]="isColored2? '#e9204f':'#878787'" (click)="changeContent2()">
+                DUBAI</span>
+            <span class="pr-5 hov" [style.color]="isColored3? '#e9204f':'#878787'"
+                (click)="changeContent3()">KUWAIT</span>
+            <span class="hov" [style.color]="isColored4? '#e9204f':'#878787'" (click)="changeContent4()">BAHRAIN</span>
+        </h6>
+    </div>
+    <div class="col-md-12 map-container" *ngIf="isColored1">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4438.184168335073!2d29.024418795573478!3d41.10897554821697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab5c1cc640759%3A0x35d222fc49b4301e!2sVeko%20Giz%20Plaza!5e1!3m2!1sar!2seg!4v1573720064569!5m2!1sar!2seg"
+            width="1330" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <div class="col-md-12 map-footer text-center">
+            <h6 class="pt-4 pcolor">
+                <span class="pr-5">ISTANBUL</span>
+                <span class="pr-5"> MASLAK MAHALLESI</span>
+                <span class="pr-5">VEKO GIZ PLAZA</span>
+                <span> HELLO@SNAPPCARD.COM</span>
+            </h6>
+        </div>
+    </div>
+    <div class="col-md-12 map-container" *ngIf="isColored2">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35559.85544706679!2d55.188099132900184!3d25.107706447322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2z2K_YqNmKIC0g2KfZhNil2YXYp9ix2KfYqiDYp9mE2LnYsdio2YrYqSDYp9mE2YXYqtit2K_YqQ!5e1!3m2!1sar!2seg!4v1573718783107!5m2!1sar!2seg"
+            width="1330" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <div class="col-md-12 map-footer text-center">
+            <h6 class="pt-4 pcolor">
+                <span class="pr-5">DUBAI</span>
+                <span class="pr-5"> MEDIA CITY</span>
+                <span class="pr-5">LOFT OFFICE 3A</span>
+                <span> HELLO@SNAPPCARD.COM</span>
+            </h6>
+        </div>
+    </div>
+    <div class="col-md-12 map-container" *ngIf="isColored3">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23794.359412638656!2d47.99937639397861!3d29.37610145394012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9c83ce455983%3A0xc3ebaef5af09b90e!2z2YXYr9mK2YbYqSDYp9mE2YPZiNmK2KrYjCDYp9mE2YPZiNmK2KrigI4!5e1!3m2!1sar!2seg!4v1573719073427!5m2!1sar!2seg"
+            width="1330" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <div class="col-md-12 map-footer text-center">
+            <h6 class="pt-4 pcolor">
+                <span class="pr-5">KUWAIT</span>
+                <span class="pr-5"> AL TIJARIA TOWER</span>
+                <span> HELLO@SNAPPCARD.COM</span>
+            </h6>
+        </div>
+    </div>
+
+    <div class="col-md-12 map-container" *ngIf="isColored4">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.382236590027!2d50.600260988113426!3d26.232462343652774!2m3!1f90!2f0!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x3e49afb406f1f0e9%3A0x7b459178dad0a288!2z2KfZhNio2K3YsdmK2YY!5e1!3m2!1sar!2seg!4v1573719314646!5m2!1sar!2seg"
+            width="1330" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <div class="col-md-12 map-footer text-center">
+            <h6 class="pt-4 pcolor">
+                <span class="pr-5">BAHRAIN</span>
+                <span class="pr-5"> SEEF</span>
+                <span class="pr-5">AL MOAYYED TOWER</span>
+                <span> HELLO@SNAPPCARD.COM</span>
+            </h6>
+        </div>
+    </div>
+
+    <section class="container text-dark mt-5 col-md-7">
+        <form #myForm="ngForm" (ngSubmit)="contact(myForm.value)">
+            <div class="form-group pb-3">
+                <input class="form-control p-2 form-style" placeholder="FULL NAME *" ngModel name="name"
+                #name='ngModel' required>
+                <small class="alert alert-danger" *ngIf="name.invalid && name.touched">
+                        Name is required
+                </small>
+            </div>
+            <div class="form-group pb-3">
+                <input class="form-control p-2 form-style" placeholder="EMAIL *" ngModel name="email" #email='ngModel' required email>
+                <small class="alert alert-danger" *ngIf="email.errors?.required && email.touched">
+                        Email is required
+                </small>
+               <small class="alert alert-danger" *ngIf="email.errors?.email && email.touched">
+                       Enter Email form
+               </small>
+            </div>
+            <div class="form-group pb-3">
+                <input class="form-control p-2 form-style" placeholder="COMPANY NAME" >
+            </div>
+            <div class="form-group pb-3">
+                <input class="form-control p-2 form-style" placeholder="PHONE NUMBER" >
+            </div>
+            <div class="form-group pb-3">
+                
+                <textarea class="form-control textarea-style" id="exampleFormControlTextarea1" rows="8" placeholder="MESSAGE *" ngModel name="message" #message='ngModel' required></textarea>
+                <small class="alert alert-danger" *ngIf="message.invalid && message.touched">
+                        message is required
+                </small>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-styling" [disabled]="myForm.invalid">SEND</button>
+                <h6 class="text-muted">* are required fields</h6>
+            </div>
+        </form>
+    </section>
+</div>

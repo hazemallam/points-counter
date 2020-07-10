@@ -1,0 +1,49 @@
+.main-content {
+    min-height: calc(100vh - 234px);
+}
+.homepage{
+    background: linear-gradient(90deg,#68479c 0,#68479c 51%,#fafafa 0,#fafafa);
+}
+.view{
+    margin-top: 80px;
+}
+.homepage .wrapper .left-content {
+    background: #68479c;
+}
+.homepage .wrapper .left-content, .homepage .wrapper .right-content {
+    min-height: calc(100vh - 234px);
+    padding: 80px 20px;
+    
+}
+.left-content{
+    width:100%;
+}
+.btn-settings{
+    border-radius: 20px;
+}
+.homepage .wrapper .right-content {
+    background: #fafafa;
+}
+h1{
+    font-size: 60px;
+    
+}
+
+.hr{
+    color: #68479c;
+}
+.homepage .wrapper .right-content label{
+    color: #55bcb8;
+}
+.homepage .wrapper .left-content h1{
+    color: #fafafa;
+    
+}
+.homepage .wrapper .left-content label{
+   
+    color: #ffec85
+}
+.homepage .wrapper .left-content p{
+   
+    color: #fafafa;
+}

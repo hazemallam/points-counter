@@ -1,0 +1,93 @@
+
+.main-content{
+    min-height: calc(100vh - 200px);
+    width: 100%;
+    height: 1000px;
+    background-color: #68479c;
+    position: relative;
+    
+}
+.pos{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:10%;
+    color: white;
+    font-size: 37px;
+}
+.pos-img{
+    position:absolute;
+    top:18%;
+}
+.btn-settings{
+    border-radius: 20px;
+}
+.download-store.app-store {
+    background-image: url(https://www.snappcard.com/assets/img/icons/apple-app-store.png);
+}
+.download-store {
+    width: 122px;
+    margin: 10px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40px;
+    margin-right: 10px;
+}
+.download-store.play-store {
+    background-image: url(https://www.snappcard.com/assets/img/icons/google-app-store.png);
+}
+.download-store.bb-world {
+    background-image: url(https://www.snappcard.com/assets/img/icons/bb-app-store.png);
+}
+.colr{
+    color: white;
+}
+.underlined{
+    border: 2px solid tomato;
+}
+.scolr{
+    color: #68479c;
+}
+.box{
+    box-shadow: 0 5px 20px rgba(0,0,0,.24);
+    padding: 50%;
+    width:300px;
+    text-align: center;
+    height: 270px;
+    margin-top: 50px;
+}
+.box-wid{
+    margin-bottom: 15px;
+    margin-top: 45px;
+    max-width: 90px;
+}
+.shadow{
+    box-shadow: 0 5px 20px rgba(0,0,0,.24);
+    background-color: #68479c;
+}
+.sshadow{
+    box-shadow: 0 5px 20px rgba(0,0,0,.24);
+}
+.po{
+    margin-top: 30%;
+    color: #eaeae9;
+}
+.po:hover{
+    color: white;
+    cursor: pointer;
+}
+.underlined2{
+    border: 2px solid yellow;
+}
+.posdiv{
+    position: absolute;
+    top: 30px;
+}
+.size{
+    font-size: 20px;
+}
+.hei{
+    height: 800px;
+}

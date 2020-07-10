@@ -1,0 +1,35 @@
+.navbar-logo a {
+    display: block;
+    width: 200px;
+    height: 100%;
+    background-image: url(https://www.snappcard.com/assets/img/snappcard-logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    
+}
+.btn-settings{
+    border-radius: 20px;
+}
+.navbar-fixed {
+    
+        /* overflow: hidden; */
+        background-color: 	#eaeae9;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 5;
+      
+  }
+  
+  .menu-fixed{
+      z-index: 5;
+  }
+  
+  .con-clr{
+      color: #627071;
+  }
+  .hov:hover{
+    color: #e9204f !important;
+    cursor: pointer;
+}

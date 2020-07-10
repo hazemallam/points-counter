@@ -1,0 +1,53 @@
+footer{
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer ul li a {
+    color: #68479c;
+    margin-bottom: 10px;
+}
+footer .half-section a {
+    display: block;
+}
+ul li a {
+    text-decoration: none;
+    
+}
+footer a {
+    font-size: 0.7rem;
+    color: #68479c;
+    display: inline-block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    
+}
+li{
+    list-style: none;
+}
+footer .copyright {
+    margin-top: 0;
+    color: #68479c;
+}
+.btn-settings{
+    border-radius: 20px;
+}
+.download-store.app-store {
+    background-image: url(https://www.snappcard.com/assets/img/icons/apple-app-store.png);
+}
+.download-store {
+    width: 70px;
+    margin: 10px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 24px;
+}
+.download-store.play-store {
+    background-image: url(https://www.snappcard.com/assets/img/icons/google-app-store.png);
+}
+.download-store.bb-world {
+    background-image: url(https://www.snappcard.com/assets/img/icons/bb-app-store.png);
+}
+.bo{
+    bottom: 0;
+}

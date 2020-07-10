@@ -1,0 +1,240 @@
+<nav class="navbar navbar-expand-lg navbar-light text-center pb-3 navbar-fixed">
+  <section class="container">
+    <div class="navbar-logo">
+      <a class="navbar-brand" routerLink="">.</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            MERCHANTS
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="http://localhost:4200/merchants-home#benfits">Benefits</a>
+            <a class="dropdown-item" href="http://localhost:4200/merchants-home#ourmerchants">Our Merchants</a>
+            <a class="dropdown-item" href="http://localhost:4200/merchants-home#ordering">Ordering</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            USERS
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="http://localhost:4200/user-home#benefits">Benefits</a>
+            <a class="dropdown-item" routerLink="http://localhost:4200/user-home#howitworks">How it works</a>
+            <a class="dropdown-item" href="http://localhost:4200/user-home#findmerchants">Find merchants</a>
+            <a class="dropdown-item" href="http://localhost:4200/user-home#ordering">Ordering</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="discover">DISCOVER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="order">ORDER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contact">CONTACT US</a>
+        </li>
+
+        <li class="nav-item">
+          <!-- <button class="btn  btn-outline-secondary btn-settings ml-1" type="button">SIGNUP/LOGIN</button> -->
+
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn  btn-outline-secondary btn-settings ml-1" data-toggle="modal"
+            data-target="#exampleModal">
+            SIGNUP/LOGIN
+          </button>
+
+        </li>
+      </ul>
+
+    </div>
+  </section>
+</nav>
+
+<!-- Modal_1 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title pl-5" id="exampleModalLabel">Modal title</h5> -->
+        <div class="row container">
+
+
+          <!-- <span class="hov" [style.color]="isColored1? '#e9204f':'#878787'"
+            (click)="changeContent1()">login</span>
+          
+          
+            <span class="ml-auto hov" [style.color]="isColored2? '#e9204f':'#878787'" (click)="changeContent2()">signup</span> -->
+
+
+          <div class="container mt-3">
+
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+              <li class="nav-item" >
+                <a class="nav-link active" href="#login">Log In</a>
+              </li>
+              <li class="nav-item ml-auto">
+                <a class="nav-link" href="#signup">Sign Up</a>
+              </li>
+
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content border mb-3">
+              <!-- modal body 1 -->
+              <div id="login" class="container tab-pane active"><br>
+                <div class="modal-body" >
+                  <div class="text-center">
+                    <h3 class="con-clr">SnappCard for users</h3>
+                    <p class="text-muted">Log in to your existing account or create a new account and enjoy the
+                      revolution of mobile loyalty in a
+                      completely new way.</p>
+                  </div>
+                  <div class="mt-4">
+                    <!--  -->
+
+                    <form #myForm2="ngForm" (ngSubmit)="signin(myForm2.value)">
+
+                      <div class="form-group">
+
+                        <input type="email" class="form-control" 
+                          placeholder="Enter email" ngModel name="email" #email='ngModel' required email>
+                          <small class="alert alert-danger" *ngIf="email.errors?.required && email.touched">
+                              Email is required
+                          </small>
+                     <small class="alert alert-danger" *ngIf="email.errors?.email && email.touched">
+                             Enter Email form
+                     </small>
+                      </div>
+                      <div class="form-group">
+
+                        <input type="password" class="form-control"  placeholder="Password" ngModel name="password"
+                        #password='ngModel' required>
+                        <small class="alert alert-danger" *ngIf="password.invalid && password.touched">
+                            Password is required
+                        </small>
+                      </div>
+                      <div class="form-group form-check">
+                        <div class="row">
+                          <div class="col-5">
+                            <input type="checkbox" class="form-check-input" >
+                            <label class="form-check-label" >Check me out</label>
+                          </div>
+                          <div class="col-6">
+                            <span><a href="#">Uups! I forgot my password</a> </span>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="text-center">
+                        <button type="submit" class="btn  btn-outline-secondary btn-settings ml-1" [disabled]="myForm2.invalid">LOG IN</button>
+                      </div>
+                    </form>
+
+
+                  </div>
+                </div>
+              </div>
+              <!-- modal body 2 -->
+              <div id="signup" class="container tab-pane fade"><br>
+                <div class="modal-body">
+                  <div class="text-center">
+                    <h3 class="con-clr">New to SnappCard?</h3>
+                    <p class="text-muted">Then just sign up</p>
+                  </div>
+                  <div class="mt-4">
+                    <!--  -->
+
+                    <form #myForm="ngForm" (ngSubmit)="signup(myForm.value)">
+
+                      <div class="form-group">
+
+                        <input type="text" class="form-control" placeholder="FIRST NAME" ngModel name="firstname"
+                        #firstname='ngModel' required>
+                        <small class="alert alert-danger" *ngIf="firstname.invalid && firstname.touched">
+                           First Name is required
+                    </small>
+                      </div>
+                      <div class="form-group">
+
+                          <input type="text" class="form-control" placeholder="LAST NAME" ngModel name="lastname"
+                          #lastname='ngModel' required>
+                          <small class="alert alert-danger" *ngIf="lastname.invalid && lastname.touched">
+                              Last Name is required
+                       </small>
+                        </div>
+                      <div class="form-group">
+
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email" ngModel name="email"
+                          #email='ngModel' required email>
+                          <div class="alert alert-danger" *ngIf="email.errors?.required && email.touched">
+                              Email is required
+                     </div>
+                     <div class="alert alert-danger" *ngIf="email.errors?.email && email.touched">
+                             Enter Email form
+                     </div>
+                      </div>
+                      <div class="form-group">
+
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ngModel name="password"
+                        #password='ngModel' required >
+                        <div class="alert alert-danger" *ngIf="password.invalid && password.touched">
+                            Company name is required
+                     </div>
+                      </div>
+                      <div class="form-group form-check">
+                        <div class="row">
+                          <div class="col-5">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                          </div>
+                          <div class="col-6">
+                            <span class=""><a href="#">Uups! I forgot my password</a> </span>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="text-center">
+                        <button type="submit" class="btn  btn-outline-secondary btn-settings ml-1" [disabled]="myForm.invalid">SIGN UP FOR SNAPPCARD</button>
+                      </div>
+                    </form>
+
+                    <!--  -->
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- modal body 2 -->
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,251 @@
+<div>&ensp</div>
+<div class="main-content mt-5">
+    <div class="container pt-5">
+        <div class="row">
+            <select class="mr-4 select-style col-md-4 text-muted">
+                <option default>Country</option>
+                <option value="Turkey">Turkey</option>
+                <option value="KSA">KSA</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Germany">Germany</option>
+                <option value="Oman">Oman</option>
+            </select>
+            <select class="select-style col-md-4 text-muted">
+                <option selected="selected">Category</option>
+                <option value="1">Food</option>
+                <option value="2">Dessert</option>
+                <option value="3">Coffee & Drinks</option>
+                <option value="4">Others</option>
+                <option value="5">Health & Beauty</option>
+                <option value="6">Activities</option>
+                <option value="7">Retail</option>
+                <option value="8">Services</option>
+            </select>
+        </div>
+    </div>
+    <div class="container mt-3">
+
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item mr-4">
+                <a class="nav-link active" href="#list">List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#map">Map</a>
+            </li>
+
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content border mb-3">
+            <!-- modal body 1 -->
+            <div id="list" class="container tab-pane active"><br>
+                <section class="container main-content">
+                    <div class="row">
+                        <div class="card col-md-3 col-12 border-0 mt-3">
+                            <div class="col-12 border border-1 p-0" *ngFor='let dis of discover'>
+
+                                <img src="https://snappcard-partner-setup.s3.amazonaws.com/171-ff4598ba/production/5912e78ebc221.png"
+                                    class="card-img-top img-styling" alt="...">
+                                <img src="https://snappcard-partner-setup.s3.amazonaws.com/171-ff4598ba/production/5912e99631b24.png"
+                                    class="img2-styling">
+                                <h6 class="shop-name">Prêt To Go</h6>
+                                <div class="card-body">
+                                    <h5 class="card-title text-muted">Prêt To Go</h5>
+                                    <p class="card-text">Select Breakfast Items</p>
+
+                                    <div class="row ml-2">
+                                        <div class="mr-4 additional-style1">
+                                            <h6>8P</h6>
+                                        </div>
+                                        <div>
+
+                                            <h6 class="additional-style2">+1</h6>
+                                        </div>
+                                        <button type="button" class="btn  btn-outline-secondary btn-settings ml-auto"
+                                            data-toggle="modal" data-target="#exampleModal">
+                                            <i class="fas fa-plus ml-auto add-style"></i>
+                                        </button>
+
+                                    </div>
+                                    <button type="button" class="btn btn-primary mt-2" routerLink='rewards'>more
+                                        info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+            <!-- map  -->
+            <div id="map" class="container tab-pane fade"><br>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Modal_1 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title pl-5" id="exampleModalLabel">Modal title</h5> -->
+                    <div class="row container">
+
+
+                        <!-- <span class="hov" [style.color]="isColored1? '#e9204f':'#878787'"
+          (click)="changeContent1()">login</span>
+        
+        
+          <span class="ml-auto hov" [style.color]="isColored2? '#e9204f':'#878787'" (click)="changeContent2()">signup</span> -->
+
+
+                        <div class="container mt-3">
+
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#login">Log In</a>
+                                </li>
+                                <li class="nav-item ml-auto">
+                                    <a class="nav-link" href="http://localhost:4200/discover#signup">Sign Up</a>
+                                </li>
+
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content border mb-3">
+                                <!-- modal body 1 -->
+                                <div id="login" class="container tab-pane active"><br>
+                                    <div class="modal-body">
+                                        <div class="text-center">
+                                            <h3 class="con-clr">SnappCard for users</h3>
+                                            <p class="text-muted">Log in to your existing account or create a new
+                                                account and enjoy the
+                                                revolution of mobile loyalty in a
+                                                completely new way.</p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <!--  -->
+
+                                            <form>
+
+                                                <div class="form-group">
+
+                                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                                </div>
+                                                <div class="form-group">
+
+                                                    <input type="password" class="form-control"
+                                                        id="exampleInputPassword1" placeholder="Password">
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <div class="row">
+                                                        <div class="col-5">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                id="exampleCheck1">
+                                                            <label class="form-check-label" for="exampleCheck1">Check me
+                                                                out</label>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <span><a href="#">Uups! I forgot my password</a> </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="text-center">
+                                                    <button type="submit"
+                                                        class="btn  btn-outline-secondary btn-settings ml-1">LOG
+                                                        IN</button>
+                                                </div>
+                                            </form>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- modal body 2 -->
+                                <div id="signup" class="container tab-pane fade"><br>
+                                    <div class="modal-body">
+                                        <div class="text-center">
+                                            <h3 class="con-clr">New to SnappCard?</h3>
+                                            <p class="text-muted">Then just sign up</p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <!--  -->
+
+                                            <form>
+
+                                                <div class="form-group">
+
+                                                    <input type="text" class="form-control" placeholder="FIRST NAME">
+                                                </div>
+                                                <div class="form-group">
+
+                                                    <input type="text" class="form-control" placeholder="LAST NAME">
+                                                </div>
+                                                <div class="form-group">
+
+                                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                                </div>
+                                                <div class="form-group">
+
+                                                    <input type="password" class="form-control"
+                                                        id="exampleInputPassword1" placeholder="Password">
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <div class="row">
+                                                        <div class="col-5">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                id="exampleCheck1">
+                                                            <label class="form-check-label" for="exampleCheck1">Check me
+                                                                out</label>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <span class=""><a href="#">Uups! I forgot my password</a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="text-center">
+                                                    <button type="submit"
+                                                        class="btn  btn-outline-secondary btn-settings ml-1">SIGN UP FOR
+                                                        SNAPPCARD</button>
+                                                </div>
+                                            </form>
+
+                                            <!--  -->
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- modal body 2 -->
+
+            </div>
+        </div>
+    </div>
+</div>
